@@ -8,4 +8,5 @@
     <string name="advice_light">你該多吃點</string>
     <string name="advice_average">體型很棒喔!</string>
     <string name="advice_heavy">你該節食了</string>
+    <string name="action_settings">設定</string>
 </resources>

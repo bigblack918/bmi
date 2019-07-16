@@ -1,11 +1,17 @@
 package com.example.leo.bmi;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 import java.text.DecimalFormat;
 
@@ -24,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText num_weight;
     private TextView show_result;
     private TextView show_suggest;
+    private Toolbar toolbar;
 
     private void initViews(){
         button_calc = (Button)findViewById(R.id.button);
@@ -58,6 +65,44 @@ public class MainActivity extends AppCompatActivity {
                 show_suggest.setText(R.string.advice_light);
             else //剛剛好
                 show_suggest.setText(R.string.advice_average);
+
+            Toast popup = Toast.makeText(getApplicationContext(), "計算完成", Toast.LENGTH_SHORT);
+            popup.show();
         }
     };
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        switch(id)
+        {
+            case R.id.action_settings:
+                openOptionsDialog();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void openOptionsDialog()
+    {
+        new AlertDialog.Builder(this)
+                .setTitle("關於Android BMI")
+                .setMessage("Android BMI 計算")
+                .setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                .show();
+    }
 }

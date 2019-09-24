@@ -7,7 +7,10 @@ import android.view.View;
 import android.widget.Button;
 
 public class TestActivity extends AppCompatActivity implements View.OnClickListener {
+    private final String TAG = this.getClass().getSimpleName();
+    Intent intent;
     private Button serviceButton;
+    private Button broadcastButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +18,8 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_test);
         serviceButton = findViewById(R.id.serviceBtn);
         serviceButton.setOnClickListener(this);
+        broadcastButton = findViewById(R.id.broadcastBtn);
+        broadcastButton.setOnClickListener(this);
     }
 
 
@@ -22,7 +27,11 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.serviceBtn:
-                Intent intent = new Intent(this, ServiceActivity.class);
+                intent = new Intent(this, ServiceActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.broadcastBtn:
+                intent = new Intent(this, BroadcastActivity.class);
                 startActivity(intent);
                 break;
         }

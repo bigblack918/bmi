@@ -17,4 +17,7 @@
     <string name="bindService">Bind</string>
     <string name="unbindService">Unbind</string>
     <string name="getServiceStatus">GetStatus</string>
+
+    <string name="test_broadcast">broadcast</string>
+    <string name="sendBroadcast">SendBroadcast</string>
 </resources>

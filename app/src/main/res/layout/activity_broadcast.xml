@@ -4,20 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestActivity">
+    tools:context=".BroadcastActivity">
 
     <Button
-        android:id="@+id/serviceBtn"
+        android:id="@+id/sendBraodcastBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/test_service"
+        android:text="@string/sendBroadcast"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/broadcastBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/test_broadcast"
-        app:layout_constraintTop_toBottomOf="@+id/serviceBtn" />
 
 </android.support.constraint.ConstraintLayout>

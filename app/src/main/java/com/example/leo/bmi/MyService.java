@@ -7,7 +7,7 @@ import android.os.IBinder;
 import android.util.Log;
 
 public class MyService extends Service {
-    private String TAG = "MyService";
+    private final String TAG = this.getClass().getSimpleName();
     private int count = 0;
 
     public MyService() {

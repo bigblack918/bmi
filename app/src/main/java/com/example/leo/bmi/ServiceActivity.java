@@ -27,7 +27,7 @@ import android.widget.Toast;
  * 2.Bind->startService->只可用unBind才可關閉
  * */
 public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "ServiceActivity";
+    private final String TAG = this.getClass().getSimpleName();
     Intent intent;
     Button startServiceBtn;
     Button stopServiceBtn;

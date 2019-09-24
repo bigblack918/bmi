@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".BroadcastActivity"></activity>
         <activity android:name=".ServiceActivity" />
-
         <activity android:name=".TestActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -20,10 +20,18 @@
             </intent-filter>
         </activity>
 
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="MyReceiver" />
+            </intent-filter>
+        </receiver>
+
         <service
             android:name=".MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
     </application>
 
 </manifest>

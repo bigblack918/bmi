@@ -9,7 +9,7 @@ import android.util.Log;
 import com.example.leo.bmi.DAO.BmiDao;
 
 public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
-    private static final String TAG = "SQLiteDatabaseHelper";
+    private final String TAG = this.getClass().getSimpleName();
     private static final String mDatabaseName = "bmi_DB.db";
     private static final int mVersion = 1;
 

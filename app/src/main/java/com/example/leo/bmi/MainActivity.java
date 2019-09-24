@@ -22,7 +22,7 @@ import com.example.leo.bmi.DAO.BmiDao;
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "MAIN";
+    private final String TAG = this.getClass().getSimpleName();
     private SQLiteDatabaseHelper helper;
     private EditText num_height;
     private EditText num_weight;

@@ -8,5 +8,13 @@
     <string name="advice_light">你該多吃點</string>
     <string name="advice_average">體型很棒喔!</string>
     <string name="advice_heavy">你該節食了</string>
-    <string name="action_settings">設定</string>
+    <string name="action_test">測試</string>
+    <string name="clear_btn">清除</string>
+
+    <string name="test_service">service</string>
+    <string name="startService">StartService</string>
+    <string name="stopService">StopService</string>
+    <string name="bindService">Bind</string>
+    <string name="getServiceStatus">GetStatus</string>
+    <string name="unbindService">Unbind</string>
 </resources>
